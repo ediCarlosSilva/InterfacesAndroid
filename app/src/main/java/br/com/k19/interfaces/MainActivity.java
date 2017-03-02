@@ -1,7 +1,10 @@
 package br.com.k19.interfaces;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -9,10 +12,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -24,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dialog);
 
         initSpinner();
         initButton();
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         initAdvancedListView();
         initGridView();
         initAdvancedGridView();
+        initAlertDialog();
     }
 
     private void initSpinner() {
@@ -170,6 +176,51 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG);
 
                 toast.show();
+            }
+        });
+    }
+
+    private void initAlertDialog() {
+        Button button = (Button) findViewById(R.id.show_hide_dialog_btn);
+        final LinearLayout linearLayout =
+                (LinearLayout) findViewById(R.id.linear_layout_dialog);
+
+        if(button == null || linearLayout == null) {
+            return;
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Mensagem de teste");
+        builder.setTitle("Titulo da caixa");
+
+        builder.setPositiveButton("Botão 1", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                TextView message = new TextView(MainActivity.this);
+                message.setText("Botão 1 clicado");
+                linearLayout.addView(message);
+            }
+        });
+        builder.setNegativeButton("Botão 2", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                TextView message = new TextView(MainActivity.this);
+                message.setText("Botão 2 clidado");
+                linearLayout.addView(message);
+            }
+        });
+        builder.setNeutralButton("Botão 3", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                TextView message = new TextView(MainActivity.this);
+                message.setText("Botão 3 clicado");
+                linearLayout.addView(message);
+            }
+        });
+
+        final AlertDialog dialog = builder.create();
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show();
             }
         });
     }
