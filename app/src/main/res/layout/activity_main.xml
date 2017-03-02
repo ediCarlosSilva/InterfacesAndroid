@@ -28,13 +28,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome:" />
+            android:text="@string/name" />
 
         <EditText
             android:id="@+id/nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/campo_margem_inferior"
             android:hint="Ex: Edi Carlos"
             android:imeOptions="actionNext"
             android:inputType="textPersonName" />
@@ -42,13 +42,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:" />
+            android:text="@string/email" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/campo_margem_inferior"
             android:hint="Ex: contato@k19.com.br"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress" />
@@ -56,32 +56,32 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cidade:" />
+            android:text="@string/label_city" />
 
         <Spinner
             android:id="@+id/cidades"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="@dimen/activity_horizontal_margin" />
 
         <CheckBox
             android:id="@+id/noticias"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/campo_margem_inferior"
             android:checked="true"
-            android:text="Deseja receber notícias por email?" />
+            android:text="@string/label_newsletter" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sexo:" />
+            android:text="@string/label_gender" />
 
         <RadioGroup
             android:id="@+id/sexo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/campo_margem_inferior"
             android:orientation="horizontal">
 
             <RadioButton
@@ -89,13 +89,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Masculino" />
+                android:text="@string/label_gender_male" />
 
             <RadioButton
                 android:id="@+id/feminino"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Feminino" />
+                android:text="@string/label_gender_female" />
 
         </RadioGroup>
 
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#064e83"
-            android:text="Cadastrar"
+            android:text="@string/label_signup"
             android:textColor="#ffffff" />
     </LinearLayout>
 

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Interfaces</string>
+    <string name="name">Name:</string>
+    <string name="email">Email</string>
+    <string name="label_city">City:</string>
+    <string name="label_newsletter">Do you want to receivenews by email?</string>
+    <string name="label_gender">Gender:</string>
+    <string name="label_gender_male">Male</string>
+    <string name="label_gender_female">Female</string>
+    <string name="label_signup">Sign up</string>
 </resources>

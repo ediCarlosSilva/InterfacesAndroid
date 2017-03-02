@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="label_city">Cidade:</string>
+    <string name="label_newsletter">Deseja receber notícias por email?</string>
+    <string name="label_gender">Sexo:</string>
+    <string name="label_gender_male">Masculino</string>
+    <string name="label_gender_female">Feminino</string>
+    <string name="label_signup">Cadastrar</string>
+</resources>
